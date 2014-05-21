@@ -92,6 +92,9 @@ public class Switch {
                   resultado=oOperaciones.potencia(valor1, valor2);
                   System.out.println(resultado);
                break;
+               
+               default:
+                   break;
                   
              
              }
