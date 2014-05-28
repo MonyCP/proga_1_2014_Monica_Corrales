@@ -154,7 +154,7 @@ public class PracticaCiclos {
         n=Integer.parseInt(teclado.nextLine());
         
         for (int i= 0; i <= 10; i++) {
-            mult= n+i;
+            mult= n*i;
             System.out.println(n+"*"+i+'='+ mult);
             System.out.println(mult);
             
@@ -162,13 +162,13 @@ public class PracticaCiclos {
         
         while (c<=10);
         {
-               System.out.println(n+"*"+c+'=');
+            System.out.println(n+"*"+c+'=');
             mult = n*c;
             System.out.println(mult);
             c++;
         }
          do{
-              System.out.println(n+"*"+c+'=');
+            System.out.println(n+"*"+c+'=');
             mult = n*c;
             System.out.println(mult);
             c++;
