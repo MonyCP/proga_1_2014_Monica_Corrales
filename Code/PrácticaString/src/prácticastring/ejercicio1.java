@@ -34,9 +34,9 @@ public class ejercicio1 {
     public String buscaPalabra() {
         String retorno = "";
         int pos = resul.indexOf(cadena);
-          for (int i = getTexto().length(); i > 0; i--) {
-              retorno = resul.substring(0, pos) + "-" + resul.substring(pos);
-         }
+    //      for (int i = getTexto().length(); i > 0; i--) {
+    //          retorno = resul.substring(0, pos) + "-" + resul.substring(pos);
+    //      }
         if (pos != -1) {
             for (int i = getTexto().length(); i > 0; i--) {
                 retorno = resul.substring(0, pos) + "-" + resul.substring(pos);
@@ -44,6 +44,7 @@ public class ejercicio1 {
         } else {
             retorno = " No fue encontrado el string " + cadena + " en el texto.";
         }
+      
 
         return retorno;
     }
