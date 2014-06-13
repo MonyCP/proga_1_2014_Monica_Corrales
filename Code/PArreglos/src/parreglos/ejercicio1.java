@@ -4,37 +4,35 @@
  * and open the template in the editor.
  */
 
-package practicaarreglos;
+package parreglos;
 
 /**
  *
  * @author dell 3110
  */
 public class ejercicio1 {
-    //sume todos los elementos
-    //sume los mayores a 36   phyton
-    //sume los mayores a 59
+   
+    private int [] arreglo = new int [8];
     
-        int[] arreglo = new int[8];
-
-        public void Agregar(int cantidad) {
-            for (int i = 0; i < arreglo.length; i++) {
-                if (arreglo[i] == 0) {
-                    arreglo[i] = cantidad;
-                    break;
-                }
+    public void Agregar()
+    {
+        int cantidad=0;
+        for (int i = 0; i < arreglo.length; i++) {
+            if(arreglo[i]==0){
+                arreglo[i]=cantidad;
             }
         }
-
-        public int Suma() {
+    }
+    
+    public int Suma() {
             int suma = 0;
             for (int i = 0; i < arreglo.length; i++) {
                 suma += arreglo[i];
             }
             return suma;
         }
-
-        public int Suma36() {
+    
+     public int Suma36() {
             int suma = 0;
             for (int i = 0; i < arreglo.length; i++) {
                 if (arreglo[i] > 36) {
@@ -43,8 +41,7 @@ public class ejercicio1 {
             }
             return suma;
         }
-
-        public int Cantidad50() {
+     public int Cantidad50() {
             int suma = 0;
             for (int i = 0; i < arreglo.length; i++) {
                 if (arreglo[i] >= 50) {
@@ -54,4 +51,7 @@ public class ejercicio1 {
             return suma;
         }
 
+    void Agregar(int nextInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+}
