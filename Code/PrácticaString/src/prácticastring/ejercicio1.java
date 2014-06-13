@@ -11,58 +11,67 @@ package prácticastring;
  * @author dell 3110
  */
 public class ejercicio1 {
-    private String cadena;
-    private String resul;
+    //Convierte una cadena a mayuscula
+    public String toUpperCase(String valor) {
+        String resultado = "";
+        char caracter;
+        int valorAscii = 0;
+        for (int i = 0; i < valor.length(); i++) {
 
-    public String alRevez() {
-        String retorno = "";
-        for (int i = getCadena().length() - 1; i >= 0; i--) {
-            retorno += getCadena().charAt(i);
-        }
-        return retorno;
-    }
+            caracter = valor.charAt(i);
 
-    public String palindromo1() {
-        String retorno = "";
-        retorno = getCadena();
-        for (int i = getCadena().length() - 2; i >= 0; i--) {
-            retorno += getCadena().charAt(i);
-        }
-        return retorno;
-    }
-
-    public String buscaPalabra() {
-        String retorno = "";
-        int pos = resul.indexOf(cadena);
-    //      for (int i = getTexto().length(); i > 0; i--) {
-    //          retorno = resul.substring(0, pos) + "-" + resul.substring(pos);
-    //      }
-        if (pos != -1) {
-            for (int i = getTexto().length(); i > 0; i--) {
-                retorno = resul.substring(0, pos) + "-" + resul.substring(pos);
+            //En la tabla ascii los numeros entre 97 y 122 son las letras minusculas, se le resta 32 para obtener el valor ascii de la myuscula
+            if (caracter >= 97 && caracter <= 122) {
+                valorAscii = caracter - 32;
+                resultado += (char) valorAscii;
+            } else {
+                resultado += caracter;
             }
-        } else {
-            retorno = " No fue encontrado el string " + cadena + " en el texto.";
         }
-      
-
-        return retorno;
+        return resultado;
     }
 
-    public String getCadena() {
-        return cadena;
-    }
+    //Obtiene substring
+    public String subString(String texto, int inicio, int fin) {
+        String resultado = "";
 
-    public void setCadena(String cadena) {
-        this.cadena = cadena;
-    }
+        if ((inicio > fin) || (inicio > texto.length()) || (inicio < 0)) {
+            return "";
+        } else {
+            for (int i = 0; i < texto.length(); i++) {
 
-    public String getTexto() {
-        return cadena;
+                if (i >= inicio && i <= fin) {
+                    resultado += texto.charAt(i);
+                }
+            }
+            return resultado;
+        }
     }
+    //Inicio de palabra en el texto
+    public int IndexOf(String texto, String palabra, int inicio) {
+        if (inicio >= texto.length()) {
+            return -1;
+        } else {
+            for (int i = 0; i < texto.length(); i++) {
 
-    public void setTexto(String resul) {
-        this.resul = resul;
+                if (i >= inicio) {
+                    if (palabra.charAt(0) == texto.charAt(i)) 
+                    {
+                        int j = 0;
+                        while (j < palabra.length()) {
+
+                            if (texto.charAt(i + j) != palabra.charAt(j)) {
+                                break;
+                            }
+                            j++;
+                        }
+                        if (j == palabra.length()) {
+                            return i;
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
     }
-
 }
