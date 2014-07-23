@@ -26,12 +26,7 @@ public class Class7 {
         System.err.println("Digite la opción que desea");
         System.out.println("1- Ejercicio 1");
         System.out.println("2- Ejercicio 2");
-        System.out.println("3- Ejercicio 3");
-        System.out.println("4- Ejercicio 4");
-        System.out.println("5- Ejercicio 5");
-        System.out.println("6- Ejercicio 6");
-        System.out.println("7- Ejercicio 7");
-        System.out.println("8- Sair");
+        System.out.println("3- Salida 4");
         op = Integer.parseInt(oScanner.nextLine());
         switch (op) {
             case 1:
@@ -50,9 +45,13 @@ public class Class7 {
                     System.out.println("Digite la cadena a evaluar");
                     ejercicio2 oejercicio2 = new ejercicio2();
                     oejercicio2.setCadena (oScanner.nextLine());
-                    System.out.println(oejercicio2.MediaCadena());
-                    System.out.println(oejercicio2.UltimoValor());
-                    System.out.println(oejercicio2.Alrevez());
+                    System.out.println("La mitad de la palabra es "+oejercicio2.MediaCadena());
+                    System.out.println("El último valor es "+oejercicio2.UltimoValor());
+                    System.out.println("La palabra alrevez es "+oejercicio2.Alrevez());
+                    System.out.println("La palabra dividida en guiones: "+oejercicio2.Guion()); 
+                    System.out.println("La cantidad de vocales son: "+oejercicio2.Vocales());
+                    System.out.println("Su palabra es "+oejercicio2.Palindromo()+" palíndromo");
+                    
                     
                     System.out.println("¿Desea introducir otra cadena?");
                     r = oScanner.nextLine().charAt(0);
